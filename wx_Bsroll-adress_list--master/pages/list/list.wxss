@@ -1,0 +1,14 @@
+/* pages/list/list.wxss */
+page{height: 100%;background: #eee;}
+.list_wrap{height: 100%}
+.list_scroll{height: 100%}
+.listcon_box{width: 100%;height: 50px;background: #fff;display: flex;border-bottom: solid 1px #eee;}
+.bscroll_title{padding-left: 10px;height: 40px;}
+.image{flex: 1;display: flex;justify-content: center;align-items: center;}
+.image image{width: 30px;height:30px;}
+.list_con{flex: 9;padding-left: 10px;display: flex;align-items: center;}
+
+.active{color: cornflowerblue;}
+.bb{height: 100%;}
+
+.navList{position: fixed;height: 100%;top:20px;right: 15px;}

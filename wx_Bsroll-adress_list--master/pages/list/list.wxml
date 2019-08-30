@@ -1,0 +1,37 @@
+<!--pages/list/list.wxml-->
+<view class="list_wrap">
+  <scroll-view class="list_scroll" scroll-with-animation bindscroll="handleScroll" scroll-y scroll-into-view="{{currentKey}}">
+    <!-- 汽车首写字母 -->
+    <view 
+     wx:for="{{list}}"
+     wx:key="{{index}}"
+     class="list_title"
+     id="{{item.key}}"
+    >
+    <text class="bscroll_title">{{item.key}}</text>
+    <!-- 汽车名字 -->
+    <view 
+      wx:for="{{item.row}}"
+      wx:key="{{index}}"
+      wx:for-item="conItem"
+      wx:for-index="i"
+      class="listcon_box"
+    >
+    <view class="image"><image src="{{conItem.img}}"/></view>
+    <text class="list_con">{{conItem.name}}</text>
+    </view>
+    </view>
+    <view class="bb"></view>
+  </scroll-view >
+  <!-- 导航列表 -->
+  <view class="navList">
+    <view
+      wx:for="{{list}}"
+      wx:key="{{index}}"
+      bindtap="handleNav"
+      data-key="{{item.key}}"
+    >
+      <text class="{{currentIndex==index?'active':''}}">{{item.key}}</text>
+    </view>
+  </view>
+</view>
