@@ -1,0 +1,20 @@
+<!-- components/content/content.wxml -->
+  <!-- 内容 -->
+  <view
+    wx:for="{{currentList.content}}"
+    wx:key="{{index}}"
+    wx:for-index="i"
+    wx:for-item="conItem"
+  >
+  <!-- 标题 -->
+  <text>{{conItem.title}}</text>
+  <view 
+    wx:for="{{conItem.list}}"
+    wx:key="{{index}}"
+    wx:for-index="i"
+    wx:for-item="listItem"
+  >
+  <image src="{{listItem.image}}"/>
+  <text>{{listItem.title}}</text>
+  </view>
+  </view>

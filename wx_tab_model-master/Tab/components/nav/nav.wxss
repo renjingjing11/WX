@@ -1,0 +1,3 @@
+/* components/nav/nav.wxss */
+.btn{color: cadetblue;}
+.active{color: chocolate;}

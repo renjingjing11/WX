@@ -1,0 +1,6 @@
+<!--pages/tab/tab.wxml-->
+  <view>
+      <Nav navTitle="{{navTitle}}" navId="{{navId}}" bindHandleClickNavFromComponent="handleClickNavFromComponent"></Nav>
+      <Content currentList="{{currentList}}"></Content>
+  </view>
+
