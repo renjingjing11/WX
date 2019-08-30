@@ -1,0 +1,12 @@
+<scroll-view class="scroll-view" scroll-y bindscrolltolower="handleScroll">
+<!--bindscrolltolower:滚动到底部才请求数据 bindscroll:滚动时就请求数据  -->
+<view
+  wx:for="{{list}}"
+  wx:key="{{index}}"
+  class="scroll-list"
+>
+<text class="scroll-item">{{item.name}}</text>
+<navigator url="/pages/detail/detail?id={{index}}&name={{item.name}}" class="m-list-navigator">跳转详情方法1</navigator>
+<button bindtap="handleDetail" data-id="{{index}}">跳转详情方法2</button>
+</view>
+</scroll-view>
