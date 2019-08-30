@@ -1,0 +1,3 @@
+/* pages/tab/tab.wxss */
+.btn{color: cadetblue;}
+.active{color: chocolate;}

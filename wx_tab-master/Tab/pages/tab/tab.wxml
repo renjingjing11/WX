@@ -1,0 +1,36 @@
+<!--pages/tab/tab.wxml-->
+
+
+  
+  <view>
+  
+<!-- Nav导航 -->
+  <view
+    wx:for="{{navTitle}}"
+    wx:key="{{index}}"
+    bindtap="handleNav"
+    wx:for-index="i"
+    data-tempindex="{{i}}"
+  >
+  <button class="btn {{item.id==navId?'active':''}}">{{item.title}} </button>
+  </view>
+  <!-- 内容 -->
+  <view
+    wx:for="{{currentList.content}}"
+    wx:key="{{index}}"
+    wx:for-index="i"
+    wx:for-item="conItem"
+  >
+  <!-- 标题 -->
+  <text>{{conItem.title}}</text>
+  <view 
+    wx:for="{{conItem.list}}"
+    wx:key="{{index}}"
+    wx:for-index="i"
+    wx:for-item="listItem"
+  >
+  <image src="{{listItem.image}}"/>
+  <text>{{listItem.title}}</text>
+  </view>
+  </view>
+</view>
